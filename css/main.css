@@ -104,11 +104,19 @@ div.input-container button {
 }
 
 #Order {
-    background-color: #14CCC6;
+    background-color: #0DBA75;
 }
 
 #Order:hover {
     background-color: #13BAB4;
+}
+
+#Reset {
+    background-color: #FF6B0F;
+}
+
+#Reset:hover {
+    background-color: #FF4D0F;
 }
 
 :disabled {

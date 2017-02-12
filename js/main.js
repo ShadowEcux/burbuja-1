@@ -8,6 +8,14 @@ $('#Order').click(function () {
 });
 
 /**
+ * Button event, reset the array
+ */
+$('#Reset').click(function () {
+    numbers = [];
+    $('#Main').html('');
+});
+
+/**
  * Button event, Add a Number to the array
  */
 $('#Add').click(function () {
@@ -35,6 +43,8 @@ $('#Add').click(function () {
 async function bubble (list) {
     $('#Order').attr('disabled','disabled');
     $('#Add').attr('disabled','disabled');
+    $('#Reset').attr('disabled','disabled');
+
     var swapped;
     do {
         swapped = false;
@@ -60,6 +70,7 @@ async function bubble (list) {
     } while (swapped);
     $('#Order').removeAttr('disabled');
     $('#Add').removeAttr('disabled');
+    $('#Reset').removeAttr('disabled');
 }
 
 /**
