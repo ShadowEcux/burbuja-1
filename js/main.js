@@ -11,18 +11,21 @@ $('#Order').click(function () {
  * Button event, Add a Number to the array
  */
 $('#Add').click(function () {
-    
-    let number = Number($('#Number').val());
-    if (number == '')
+    let text = $('#Number').val();
+    if (text == '')
         return;
 
-    if (numbers.includes(number))
-        return;
+    let res = text.split(",");
+    res.forEach(function(item) {
+        let number = Number(item);
+        if (numbers.includes(number))
+            return;
+        numbers.push(number);
+        let element = $('#number-block').children().clone();
+        $('#Number').val("");
+        $('#Main').append(element.html("<span>"+number+"</span>"));
+    })
 
-    numbers.push(number);
-    let element = $('#number-block').children().clone();
-    $('#Number').val("");
-    $('#Main').append(element.html("<span>"+number+"</span>"));
     $('#Number').focus();
 });
 
@@ -71,7 +74,7 @@ function sleep(ms) {
  */
 $('#Number').keydown(function (e) {
         // Allow: backspace, delete, tab, escape and enter
-    if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 110]) !== -1 ||
+    if ($.inArray(e.keyCode, [46, 8, 9, 27, 13, 188]) !== -1 ||
             // Allow: Ctrl/cmd+A
         (e.keyCode == 65 && (e.ctrlKey === true || e.metaKey === true)) ||
             // Allow: Ctrl/cmd+C
