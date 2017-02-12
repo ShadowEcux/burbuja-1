@@ -1,0 +1,128 @@
+html {
+    font-family: 'Poppins', sans-serif;
+    background-color: #FF9F00;
+}
+
+h1 {
+    padding: 5px;
+    text-align: center;
+    font-size: 8vh;
+    color: whitesmoke;
+}
+
+.container {
+    height: 50px;
+    margin: 0.5em;
+    padding: 0.8em;
+    border: 10px solid #2C3E50;
+
+    
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-block {
+    flex: 1;
+    min-width: 0;
+    margin: 5px;
+    padding: 5px;
+    background-color: #B4DAFF;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    transition-duration: 0.5s;
+}
+
+.number-block span {
+    font-size: 17px;
+    font-weight: 300;
+}
+
+.selected {
+    background-color: #005AB2;
+    color: white;
+}
+
+div.input-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+}
+
+div.input-container input, div.input-container button {
+    margin: 0.5em;
+    font-size: 1.4em;
+    padding: 0.8em;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    border: none;
+    border-radius: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+input {
+    width: 70%;
+    background-color: #d0d1d0;
+    color: #2C3E50;
+    transition: background-color 0.25s, border-color 0.25s;
+}
+
+input::-moz-placeholder {
+    color: #696969 !important;
+    font-weight: bold;
+}
+
+input::-webkit-input-placeholder {
+    color: #696969;
+    font-weight: bold;
+}
+
+input[type=text]:focus, input[type=text]:valid {
+    background-color: white;
+}
+
+div.input-container button {
+    transition-duration: 0.5s;
+    color: white;
+    cursor: pointer;
+    width: 400px;
+}
+
+#Add {
+    background-color: #005AB2;
+}
+
+#Add:hover {
+    background-color: #146ACC;
+}
+
+#Order {
+    background-color: #14CCC6;
+}
+
+#Order:hover {
+    background-color: #13BAB4;
+}
+
+@media (max-width: 600px) {
+    div.input-container {
+        flex-wrap: wrap;
+    }
+
+    div.input-container input, div.input-container button {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .number-block span {
+        font-size: 12px;
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "burbuja",
+  "authors": [
+    "Cesar <c1sar90@gmail.com>"
+  ],
+  "description": "Algoritmo de Ordenamiento",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1"
+  }
+}
