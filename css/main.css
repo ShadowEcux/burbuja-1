@@ -10,13 +10,33 @@ h1 {
     color: whitesmoke;
 }
 
+p {
+    font-size: 3vh;
+    color: white;
+    margin-left: 0.5em;
+    margin-bottom: 0;
+}
+
+.notes {
+    display: flex;
+    flex-flow: row;
+    align-items: right;
+    justify-content: right;
+}
+
+.note {
+    flex: 1;
+    font-size: 2vh;
+    color: white;
+    text-align: right;
+    margin-right: 0.5em;
+}
+
 .container {
     height: 50px;
     margin: 0.5em;
     padding: 0.8em;
     border: 10px solid #2C3E50;
-
-    
     display: flex;
     flex-flow: row;
     align-items: center;
@@ -46,7 +66,7 @@ h1 {
     color: white;
 }
 
-div.input-container {
+section.input-container {
     width: 100%;
     display: flex;
     flex-flow: row;
@@ -54,7 +74,7 @@ div.input-container {
     justify-content: center;
 }
 
-div.input-container input, div.input-container button {
+section.input-container input, section.input-container button {
     margin: 0.5em;
     font-size: 1.4em;
     padding: 0.8em;
@@ -88,7 +108,7 @@ input[type=text]:focus, input[type=text]:valid {
     background-color: white;
 }
 
-div.input-container button {
+section.input-container button {
     transition-duration: 0.5s;
     color: white;
     cursor: pointer;
@@ -123,12 +143,14 @@ div.input-container button {
     opacity: 0.7;
 }
 
+
+
 @media (max-width: 600px) {
-    div.input-container {
+    section.input-container {
         flex-wrap: wrap;
     }
 
-    div.input-container input, div.input-container button {
+    section.input-container input, section.input-container button {
         width: 100%;
         font-size: 1em;
     }

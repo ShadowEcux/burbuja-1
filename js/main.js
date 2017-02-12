@@ -1,4 +1,5 @@
 var numbers = [];   // Number's Array
+var ordening = false;
 
 /**
  * Button event, call to bubble function
@@ -38,13 +39,25 @@ $('#Add').click(function () {
 });
 
 /**
+ * Delete a Element from the array
+ */
+$('#Main').on('dblclick', '.number-block', function() {
+    if (ordening)
+        return
+    let pos = $(".number-block").index( this );
+    numbers.splice(pos, 1);
+    $('#Main').children().eq(pos).remove();
+});
+
+/**
  * Bubble Function
  */
 async function bubble (list) {
     $('#Order').attr('disabled','disabled');
     $('#Add').attr('disabled','disabled');
     $('#Reset').attr('disabled','disabled');
-
+    
+    ordening = true;
     var swapped;
     do {
         swapped = false;
@@ -71,6 +84,7 @@ async function bubble (list) {
     $('#Order').removeAttr('disabled');
     $('#Add').removeAttr('disabled');
     $('#Reset').removeAttr('disabled');
+    ordening = false;
 }
 
 /**

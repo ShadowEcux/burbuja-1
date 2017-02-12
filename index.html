@@ -8,22 +8,27 @@
 </head>
 <body>
     <h1>Burbuja</h1>
-    <div class="input-container">
-        <input id="Number" type="text" placeholder="Inserte una Lista de Números Ej.:  3,2,1" required>
+    <p>Inserte una Lista de Números:</p>
+    <section class="input-container">
+        <input id="Number" type="text" placeholder="Ej.:  3,2,1" required>
         <button id="Add">Agregar</button>
-    </div>
+    </section>
 
-    <div class="input-container">
+    <section class="input-container">
         <button id="Reset">Limpiar</button>
         <button id="Order">Ordenar</button>
-    </div>
+    </section>
 
-    <div id="Main" class="container"></div>
+    <section id="Main" class="container"></section>
 
     <div id="number-block" hidden> 
         <div class="number-block"><span></span></div>
     </div>
 
+    <div class="notes">
+        <span class="note">*Para eliminar un elemento darle doble click</span>
+    </div>
+    
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="js/main.js"></script>
 </body>
