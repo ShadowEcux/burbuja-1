@@ -19,7 +19,7 @@ p {
 
 .notes {
     display: flex;
-    flex-flow: row;
+    flex-flow: column;
     align-items: right;
     justify-content: right;
 }
@@ -28,6 +28,13 @@ p {
     flex: 1;
     font-size: 2vh;
     color: white;
+    text-align: right;
+    margin-right: 0.5em;
+}
+#Message {
+    flex: 1;
+    font-size: 4vh;
+    font-weight: 400;
     text-align: right;
     margin-right: 0.5em;
 }

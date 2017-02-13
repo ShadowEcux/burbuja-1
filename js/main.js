@@ -14,12 +14,14 @@ $('#Order').click(function () {
 $('#Reset').click(function () {
     numbers = [];
     $('#Main').html('');
+    $('#Message').html('');
 });
 
 /**
  * Button event, Add a Number to the array
  */
 $('#Add').click(function () {
+    $('#Message').html('');
     let text = $('#Number').val();
     if (text == '')
         return;
@@ -53,10 +55,12 @@ $('#Main').on('dblclick', '.number-block', function() {
  * Bubble Function
  */
 async function bubble (list) {
+    if (numbers.length == 0)
+        return;
     $('#Order').attr('disabled','disabled');
     $('#Add').attr('disabled','disabled');
     $('#Reset').attr('disabled','disabled');
-    
+    $('#Message').html('Ordenando').css('color','yellow');
     ordening = true;
     var swapped;
     do {
@@ -85,6 +89,7 @@ async function bubble (list) {
     $('#Add').removeAttr('disabled');
     $('#Reset').removeAttr('disabled');
     ordening = false;
+    $('#Message').html('Completado').css('color','green');
 }
 
 /**
